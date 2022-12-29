@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css')}}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css" integrity="sha384-Tv5i09RULyHKMwX0E8wJUqSOaXlyu3SQxORObAI08iUwIalMmN5L6AvlPX2LMoSE" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Viga" rel="stylesheet">
+
+    <title>Use Case Points</title>
+</head>
+
+<body>
+
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Use Case Points</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ml-auto">
+                    <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="#workingspace">About</a>
+                    <a class="nav-item nav-link" href="#feature_ucp">Features</a>
+                    <a class="nav-item nav-link" href="#footer">About</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- akhir Navbar -->
+
+    <!-- Jumbotron -->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Software Effort <span>Estimation</span> <br>(Use <span>Case</span> Points)</h1>
+        </div>
+    </div>
+    <!-- akhir Jumbotron -->
+
+
+    <!-- container -->
+    <div class="container mb-4">
+
+        <!-- info panel -->
+        <div class="row justify-content-center">
+            <div class="col-10 info-panel">
+                <div class="row">
+                    <div class="col-sm">
+                        <img src="{{ url_for('static',filename='img/employee.png')}}" alt="Employee" class="img-fluid float-left">
+                        <h4>Estimation Time</h4>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div class="col-lg">
+                        <img src="{{ url_for('static',filename='img/hires.png')}}" alt="HiRes" class="img-fluid float-left">
+                        <h4>Estimation Cost</h4>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div class="col-lg">
+                        <img src="{{ url_for('static',filename='img/security.png')}}" alt="Security" class="img-fluid float-left">
+                        <h4>Estimation Person</h4>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- akhir info panel -->
+
+
+        <!-- About -->
+        <section class="about">
+            <div id="workingspace" class="row workingspace">
+                <div class="col-lg-6">
+                    <img src="{{ url_for('static',filename='img/estimation.jpg')}}" alt="Working Space" class="img-fluid">
+                </div>
+                <div class="col-lg-5">
+                    <h2>Use <span>Case</span> Points</h2>
+                    <p class="text-justify">Use Case Point (UCP) merupakan bentuk model terbaru untuk estimasi perangkat lunak, dimana UCP itu bekerja dengan baik dalam teknik analisis berdasarkan object-oriented. UCP merupakan pengembangan dari teknik estimasi function point karena kelemahan dari function point menggunakan penilaian subjektif, dengan menghasilkan hasil yang kurang efektif dan efisien</p>
+                </div>
+            </div>
+        </section>
+        <!-- akhir about -->
+
+        <!-- UAW -->
+        <div class="section-uaw">
+            <div id="feature_ucp" class="row justify-content-center title_features workingspace">
+                <div class="col-12">
+                    <h4>Unadjusted <span>Actor</span> Weights (UAW)</h4>
+                    <hr class="hr_dark">
+                </div>
+
+                <div class="col-12">
+                    <p class="text-justify text-infos">Nilai UAW adalah total nilai yang didapatkan dari total aktor dari masing – masing tipe yang ada pada use case dikalikan bobot masing – masing tipe atau tingkat kompleksitasnya.</p>
+                    <div class="table-responsive">
+                        <table id="table_uaw" class="table table-bordered table-hover">
+                            <thead class="text-center" style="background-color: #0F83D4;">
+                                <tr>
+                                    <th class="text-center text-white" colspan="3">Kompleksitas Actor</th>
+                                </tr>
+                                <tr>
+                                    <th class="text-center text-white">Simple (Bobot 1)</th>
+                                    <th class="text-center text-white">Average (Bobot 2)</th>
+                                    <th class="text-center text-white">Complex (Bobot 3)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Aktor pada use case berinteraksi melalui API atau command prompt</td>
+                                    <td>Aktor berinteraksi melalui protokol, seperti TCP/IP</td>
+                                    <td>Aktor berinteraksi melalui GUI atau Web Page</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-group text-right">
+                        <button class="btn btn-lg btn-primary" onclick="showModal('uaw')">Calculate UAW</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- akhir UAW -->
+
+        <!-- UUCW -->
+        <div class="section-uucw mt-4">
+            <div id="feature_ucp" class="row justify-content-center title_features workingspace">
+                <div class="col-12">
+                    <h4>Unadjusted <span>Use Case</span> Weights (UUCW)</h4>
+                    <hr class="hr_dark">
+                </div>
+
+                <div class="col-12">
+                    <p class="text-justify text-infos">Merupakan nilai bobot use case yang didapatkan dari menghitung berapa banyak total use case dari masing –
+                        masing tipe berdasarkan tingkat
+                        kompleksitas dikalikan dengan bobot masing – masing tipe</p>
+                    <p class="text-justify text-infos">
+                        Kompleksitas actor Unadjusted Actor Weight (UAW) dalam pengukuran UCP dibagi kedalam tiga kategori yaitu:
+                    </p>
+                    <div class="table-responsive">
+                        <table id="table_uucw" class="table table-bordered table-hover">
+                            <thead class="text-center" style="background-color: #0F83D4;">
+                                <tr>
+                                    <th class="text-center text-white" colspan="3">Kompleksitas Use Case</th>
+                                </tr>
+                                <tr>
+                                    <th class="text-center text-white">Simple (Bobot 5)</th>
+                                    <th class="text-center text-white">Average (Bobot 10)</th>
+                                    <th class="text-center text-white">Complex (Bobot 15)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Jika Transaksi < 4</td>
+                                    <td>Jika Transaksi <= 4 sampai <=7</td>
+                                    <td>Jika Transaksi > 7</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-group text-right">
+                        <button class="btn btn-lg btn-primary" onclick="showModal('uucw')">Calculate UUCW</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- Akhir UUCW -->
+        <!-- Section form -->
+        <section class="features">
+            <div id="feature_ucp" class="row justify-content-center title_features">
+                <div class="col-12">
+                    <h4>Predict Effort</h4>
+                    <hr class="hr_dark">
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <form action="{{url_for('predict') }}" method="post" id="form_calculate">
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label for="uaw">UAW</label>
+                                <input type="number" min="0" class="form-control form-control-lg" name="uaw" id="uaw" placeholder="Unajested Actor Weight">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label for="uucw">UUCW</label>
+                                <input type="number" min="0" class="form-control form-control-lg" name="uucw" id="uucw" placeholder="Unajested Use Case Weight">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <button type="button" class="btn btn-lg btn-primary float-right" onclick="calculate()">Calculate</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!--  -->
+
+    </div>
+    <!-- akhir container -->
+
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <h6 class="mt-5 text-white font-weight-bold float-left">© 2022 Use Case Points Estimation - Fahmi Ardiansyah</h6>
+                </div>
+                <div class="col-6">
+                    <div class="contact-content text-center">
+                        <div class="contact-social float-right p-3">
+                            <ul>
+                                <li><a class="hover-target" href=""><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a class="hover-target" href=""><i class="fab fa-linkedin-in"></i></a></li>
+                                <li><a class="hover-target" href=""><i class="fab fa-github"></i></a></li>
+                                <li><a class="hover-target" href=""><i class="fab fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Modal -->
+
+    <div id="modalCalculate" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha512-U6K1YLIFUWcvuw5ucmMtT9HH4t0uz3M366qrF5y4vnyH6dgDzndlcGvH/Lz5k8NFh80SN95aJ5rqGZEdaQZ7ZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/additional-methods.js"></script>
+
+    <script>
+        function calculate() {
+            var uaw = $("#uaw").val();
+            var uucw = $("#uucw").val();
+            var uaw_float = parseFloat($("#uaw").val())
+            var uucw_float = parseFloat($("#uucw").val());
+            console.log(uaw)
+            if ((uucw == '' || uaw == '') && (uucw == 0 || uaw == 0)) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Periksa Input Anda!',
+                })
+            } else {
+                var server_data = [{
+                    'UAW': uaw_float,
+                    'UUCW': uucw_float
+                }];
+                $.ajax({
+                    type: 'POST',
+                    url: "{{url_for('predict')}}",
+                    contentType: 'application/json;charset=UTF-8',
+                    data: JSON.stringify(server_data),
+                    dataType: 'json',
+                    success: function(data) {
+                        if (data.status == 'success') {
+                            loading(data.result)
+                        }
+                    }
+                });
+            }
+
+        }
+
+        function loading(result_ajax) {
+            let timerInterval
+            Swal.fire({
+                title: 'Loading!',
+                html: 'Calculate Predictions.',
+                timer: 4000,
+                timerProgressBar: true,
+                didOpen: () => {
+                    Swal.showLoading()
+                    const b = Swal.getHtmlContainer().querySelector('b')
+                    timerInterval = setInterval(() => {
+                        b.textContent = Swal.getTimerLeft()
+                    }, 100)
+                },
+                willClose: () => {
+                    clearInterval(timerInterval)
+                }
+            }).then((result) => {
+                /* Read more about handling dismissals below */
+                if (result.dismiss === Swal.DismissReason.timer) {
+                    // console.log('I was closed by the timer')
+                    Swal.fire(`Hasil Prediksi : ${result_ajax}`)
+                }
+            })
+        }
+
+        function showModal(status_modal) {
+            var modal_title = 'Calculate UAW';
+            var bobot_simple = 1;
+            var bobot_average = 2;
+            var bobot_complex = 3;
+
+            if (status_modal == 'uucw') {
+                var modal_title = 'Calculate UUCW';
+                var bobot_simple = 5;
+                var bobot_average = 10;
+                var bobot_complex = 15;
+            }
+
+            $("#modalCalculate .modal-content").empty().append(`
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">${modal_title}</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form id="form_calculate_total">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="simple" class="col-form-label">Simple:</label>
+                            <input type="text" name="simple" class="form-control" id="simple" placeholder="Bobot (${bobot_simple})">
+                        </div>
+                        <div class="form-group">
+                            <label for="average" class="col-form-label">Average:</label>
+                            <input type="text" name="average" class="form-control" id="average" placeholder="Bobot (${bobot_average})">
+                        </div>
+                        <div class="form-group">
+                            <label for="complex" class="col-form-label">Complex:</label>
+                            <input type="text" name="complex" class="form-control" id="complex" placeholder="Bobot (${bobot_complex})">
+                        </div>
+                        <div id="calculate_result" class="form-group text-center d-none">    
+                            <h4 class="text-center">
+                                Total ${modal_title}
+                            </h4>
+
+                            <h1 id="total_${status_modal}" class="text-danger text-center"> 0 </h1>
+                            <button type="button" class="btn btn-default btn-sm text-center" onClick="CopyToClipboard('total_${status_modal}')">Copy</button>
+                        </div>
+        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Calculate Total</button>
+                    </div>
+                </form>
+            `);
+
+            $('#modalCalculate').modal('show');
+            $("#form_calculate_total").validate({
+                rules: {
+                    simple: {
+                        required: true
+                    },
+                    average: {
+                        required: true
+                    },
+                    complex: {
+                        required: true
+                    },
+                },
+                submitHandler: function(form) {
+                    // var total_calculate = (float($("#simple").val()) * bobot_simple) + (float($("#average").val()) * bobot_average) + (float($("#complex").val()) * bobot_complex);
+                    // console.log(total_calculate)
+                    var simple = parseInt($("#simple").val())
+                    var average = parseInt($("#average").val());
+                    var complex = parseInt($("#complex").val());
+
+                    var server_data = [{
+                        'simple': simple,
+                        'average': average,
+                        'complex': complex,
+                        'bobot_simple': bobot_simple,
+                        'bobot_average': bobot_average,
+                        'bobot_complex': bobot_complex
+                    }];
+
+                    $.ajax({
+                            type: 'POST',
+                            url: "{{url_for('calculate')}}",
+                            contentType: 'application/json;charset=UTF-8',
+                            data: JSON.stringify(server_data),
+                            dataType: 'json',
+                        })
+                        .done(function(data) {
+                            // console.log(data)
+                            $("#calculate_result").addClass('d-none');
+                            if (data.status == 'success') {
+                                $("#calculate_result").removeClass('d-none');
+                                $(`#total_${status_modal}`).html(data.total_calculate)
+                            }
+                        })
+                        .fail(function() {
+                            Swal.fire({
+                                title: "Error",
+                            });
+                        });
+                }
+            })
+
+        }
+
+        function CopyToClipboard(id) {
+            var r = document.createRange();
+            r.selectNode(document.getElementById(id));
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(r);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+        }
+    </script>
+</body>
+
+</html>
